@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BaseController.cs" />
+    <Compile Include="Controller\IndexController.cs" />
+    <Compile Include="Controller\ParticipantsController.cs" />
+    <Compile Include="Controller\VoteController.cs" />
     <Compile Include="Domain\Class1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

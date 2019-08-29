@@ -15,6 +15,10 @@ namespace webServer
     {
         static void Main(string[] args)
         {
+
+            string file;
+            byte[] fileAsByte;
+            Stream output;
             HttpListener listener = new HttpListener();
 
             listener.Prefixes.Add("http://*:8881/");
@@ -28,16 +32,14 @@ namespace webServer
 
 
 
-                var requestPathFile = pathIndex + request.Url.LocalPath;
+               
 
                 if(File.Exists(requestPathFile))
                 {
-                    string file;
-                    byte[] fileAsByte;
-                    Stream output;
+                    
 
-                    if (request.Url.LocalPath.Contains("part.html"))
-                        HandleParticipantsRoute(response, requestPathFile, out file, out fileAsByte, out output);
+                    //if (request.Url.LocalPath.Contains("part.html"))
+                       // HandleParticipantsRoute(response, requestPathFile, out file, out fileAsByte, out output);
 
                 }
 
@@ -46,9 +48,9 @@ namespace webServer
 
                     fileAsByte = System.Text.Encoding.UTF8.GetBytes(file);
                     response.ContentLength64 = fileAsByte.Length;
-                    var output = response.OutputStream;
-                    var output.Write(fileAsByte, 0, fileAsByte.Length);
-                    var output.Close();
+                     output = response.OutputStream;
+                     output.Write(fileAsByte, 0, fileAsByte.Length);
+                     output.Close();
                 }
 
 
