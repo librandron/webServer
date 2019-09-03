@@ -28,17 +28,8 @@ namespace webServer.Domain
         public void AddUser(string name)
         {
             users.Add(new Users() { name = name });
-            File.WriteAllText(Program.dataBaseSpace, JsonConvert.DeserializeObject(data));
+            File.WriteAllText(Program.dataBaseSpace, JsonConvert.SerializeObject(users));
         }
 
     }
-
-    class Users
-    {
-        public string name { get; set; };
-
-    }
-
-
-
 }

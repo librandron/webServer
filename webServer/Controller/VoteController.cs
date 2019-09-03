@@ -13,7 +13,7 @@ namespace webServer.Controller
         public override void Handle(HttpListenerContext httpContext)
         {
             var fileJson = File.ReadAllText(Program.dataBaseSpase);
-            DataBase data = JsonConvert.DeserializeObject<DataBase>(foleJson);
+            DataBase data = JsonConvert.DeserializeObject<DataBase>(fileJson);
             var userList = "";
             foreach (var user in collectidata.users)
             {
