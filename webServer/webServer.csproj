@@ -50,7 +50,8 @@
     <Compile Include="Controller\IndexController.cs" />
     <Compile Include="Controller\ParticipantsController.cs" />
     <Compile Include="Controller\VoteController.cs" />
-    <Compile Include="Domain\Class1.cs" />
+    <Compile Include="Domain\DataBase.cs" />
+    <Compile Include="Domain\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,6 +59,9 @@
     <None Include="App.config" />
     <None Include="json.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,17 +6,8 @@ using System.Threading.Tasks;
 
 namespace webServer.Domain
 {
-    class Database
-    {
-        public List<Users> users { get; set;}
-
-    }
-
     class Users
     {
-        public string name { get; set; };
-
+        public string Name { }
     }
-
-
 }

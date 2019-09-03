@@ -16,14 +16,10 @@ namespace webServer
     {
         static void Main(string[] args)
         {
-
-            string file;
-            byte[] fileAsByte;
-            Stream output;
             HttpListener listener = new HttpListener();
-
             listener.Prefixes.Add("http://*:8881/");
             listener.Start();
+
             while (listener.IsListening)
             {
                 var pathIndex = @"D:\";

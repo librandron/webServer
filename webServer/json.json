@@ -1,6 +1,11 @@
 {
-  "Users": {
-    "Andrei",
-    "Olga"
-  }
+  "Users": 
+  [
+    {
+      "name": "Andrei"
+    },
+    {
+      "name": "Olga"
+    }
+  ]
 }
